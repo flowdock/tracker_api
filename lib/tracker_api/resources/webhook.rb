@@ -13,6 +13,10 @@ module TrackerApi
       attribute :kind, String
       attribute :created_at, DateTime
       attribute :updated_at, DateTime
+
+      def delete
+        Endpoints::Webhook.new(client).delete(project_id, id)
+      end
     end
   end
 end
