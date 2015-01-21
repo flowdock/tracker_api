@@ -7,9 +7,9 @@ module TrackerApi
         @client = client
       end
 
-      def get_member(project_id, user_id)
-        data = client.get("/projects/#{project_id}/memberships/#{user_id}").body
-        Resources::ProjectMembership.new({ client: client, project_id: project_id }.merge(data))
+      def get_account_member(account_id, person_id)
+        data = client.get("/accounts/#{account_id}/memberships/#{person_id}").body
+        Resources::AccountMembership.new({ client: client, account_id: account_id }.merge(data))
       end
 
       def get(project_id, params={})

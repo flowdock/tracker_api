@@ -47,6 +47,7 @@ module TrackerApi
     autoload :Person, 'tracker_api/resources/person'
     autoload :Project, 'tracker_api/resources/project'
     autoload :ProjectMembership, 'tracker_api/resources/project_membership'
+    autoload :AccountMembership, 'tracker_api/resources/account_membership'
     autoload :Story, 'tracker_api/resources/story'
     autoload :Task, 'tracker_api/resources/task'
     autoload :TimeZone, 'tracker_api/resources/time_zone'
